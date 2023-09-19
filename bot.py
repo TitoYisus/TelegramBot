@@ -12,6 +12,9 @@ bot = telebot.TeleBot(BOT_TOKEN)
 def send_welcome(message):
     bot.reply_to(message, "Howdy, how are you doing?")
 
+@bot.message_handler(commands=['Delega_Ayuda'])
+def send_help(message):
+    bot.reply_to(message, "La vida es una lenteja\nO la tomas o la dejas")
 
 @bot.message_handler(func=lambda msg: True)
 def echo_all(message):
