@@ -19,6 +19,10 @@ def add_dates(message):
 def manda_mensaje():
     bot.send_message(chat_id=-1001882486742, text="esto es una prueba de recordatorio")
 
+def main():
+    pass
+
 
 if __name__ == '__main__':
     manda_mensaje()
+    main()
