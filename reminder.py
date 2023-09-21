@@ -13,12 +13,12 @@ today = date.today()
 dia = str(today.day)
 mes = str(today.month)
 
-
-
-@bot.message_handler(commands=['anadir'])
 def add_dates(message):
     bot.send_message(chat_id="-1001882486742", text="prueba")
 
+def manda_mensaje():
+    bot.send_message(chat_id=-1001882486742, text="esto es una prueba de recordatorio")
 
 
-bot.infinity_polling()
+if __name__ == '__main__':
+    manda_mensaje()
