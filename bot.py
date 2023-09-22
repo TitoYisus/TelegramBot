@@ -39,6 +39,12 @@ def descargar_archivo(message):
     nombre = archivo.file_name
     id_archivo = archivo.file_id
     bot.reply_to(message, "Descargando " + nombre + "...")
+    file_link = bot.get_file_url(id_archivo)
+    print(file_link)
+    descarga = bot.get_file(id_archivo)
+    print(descarga)
+    descarga.download(custom_path="./files/recordatorios.csv")
+    
 
 
 
