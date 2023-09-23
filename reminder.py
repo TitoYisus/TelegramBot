@@ -3,11 +3,15 @@ import telebot
 import json
 from dotenv import load_dotenv
 from datetime import date, datetime
+from pathlib import Path
 
 load_dotenv()
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 bot = telebot.TeleBot(BOT_TOKEN)
+
+THIS_FOLDER = Path(__file__).parent.resolve()
+file_path = THIS_FOLDER / "files/reminders.json"
 
 today = date.today()
 cid = -1001882486742
@@ -16,8 +20,6 @@ aviso = "*IMPORTANTE*\n\nToca extender la expiraci√≥n en PythonAnywhere si quer√
 
 def manda_mensaje():
     # bot.send_message(cid, text="esto es una prueba de recordatorio")
-
-    file_path = "./files/reminders.json"
     with open(file_path, "r") as f:
         recordatorios = json.load(f)
         k, v = list(recordatorios.items())[0]
