@@ -49,7 +49,6 @@ def comprueba_fecha_task():
     AVISAR DEL EXPIRY EL 1 Y EL 17 DE CADA MES
     """
     dia = today.day
-    print(dia)
     if dia == 1 or dia == 17:
         bot.send_message(cid, aviso, parse_mode="Markdown")
     return
