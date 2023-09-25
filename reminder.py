@@ -14,7 +14,9 @@ THIS_FOLDER = Path(__file__).parent.resolve()
 file_path = THIS_FOLDER / "files/reminders.json"
 
 today = date.today()
-cid = -1001882486742
+cid = -1001225687577
+# PRUEBA: -1001882486742
+# DELEGACION: -1001225687577
 aviso = "*IMPORTANTE*\n\nToca extender la expiración en PythonAnywhere si queréis que esto siga funcionando"
 
 
